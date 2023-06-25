@@ -310,7 +310,13 @@ def random_sleep():
 if __name__ == "__main__":
     choice = int(
         input(
-            "\n----------------------\n1: Buy GoerliETH (using ETH in Arbitrum, testnetbridge)\n2: Bridge GoerliETH -> ScrollETH (scroll.io/bridge)\n3: Uniswap ScrollETH -> USDC\n4: Syncswap ScrollETH -> USDC\n5: MES protocol deposit\n6: AAVE deposit\n7: AAVE borrow USDT (AAVE deposit needed)\nChoice: "
+            "\n----------------------"
+            "\n1: Buy GoerliETH (using ETH in Arbitrum, testnetbridge)"
+            "\n2: Bridge GoerliETH -> ScrollETH (scroll.io/bridge)"
+            "\n3: Uniswap ScrollETH -> USDC\n4: Syncswap ScrollETH -> USDC"
+            "\n5: MES protocol deposit"
+            "\n6: AAVE deposit"
+            "\n7: AAVE borrow USDT (AAVE deposit needed)\nChoice: "
         )
     )
     for key in private_keys:
