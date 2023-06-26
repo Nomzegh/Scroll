@@ -23,6 +23,8 @@ min_goerli_to_bridge = 0.5  # |Min. GoerliETH to bridge to ScrollETH |Мин. к
 max_goerli_to_bridge = 1  # |Max. GoerliETH to bridge to ScrollETH |Макс. к-во GoerliETH для бриджа в Scroll
 min_goerli_to_spend = 0.05  # |Min. ScrollETH to spend in DApp txns |Мин. к-во ScrollETH в DApp транзакциях (Uniswap, AAVE...)
 max_goerli_to_spend = 0.15  # |Max. ScrollETH to spend in DApp txns |Макс. к-во GoerliETH в DApp транзакциях
+goerli_max_priority_fee = 20 # |maxPriorityFee
+goerli_max_fee_per_gas = 1000 # |
 usdt_to_borrow = 100  # |USDT to borrow on AAVE |К-во USDT для borrow в AAVE
 
 SCROLL_RPC = "https://alpha-rpc.scroll.io/l2"
@@ -122,8 +124,8 @@ def bridge_scrollio(private_key):
         "depositETH",
         [dapp.web3.to_wei(value_eth, "ether"), 40000],
         web3.from_wei(value_wei * 1.03, "ether"),
-        2,
-        2,
+        goerli_max_priority_fee,
+        goerli_max_fee_per_gas,
         5,
     )
 
